@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "meuapp02-ee682": {
+      "hosting": {
+        "MeuApp02": [
+          "meuapp02-ee682"
+        ]
+      }
+    }
+  }
+}

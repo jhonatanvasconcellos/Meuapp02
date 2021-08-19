@@ -49,3 +49,48 @@ body {
   background-attachment: fixed;
   background-size: cover;
 }
+
+/*****Conteúdo Central*****/
+
+/* Elemento Article */
+
+article{
+  padding: 0 1rem;
+}
+
+/***** Estilos de uso geral *****/
+
+/* Centraliza conteúdo do elemento */
+.center {
+  text-align: center;
+}
+
+/* Imagens Responsivas Fluidas*/
+
+.fluid {
+  max-width: 100%;
+}
+
+/*Botões*/
+
+.btn {
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: inherit;
+  font-family: inherit;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+/* Botões 'primary' */
+
+.primary {
+  background: steelblue;
+  color: white;
+}
+
+.primary:hover {
+  background: orangered;
+}

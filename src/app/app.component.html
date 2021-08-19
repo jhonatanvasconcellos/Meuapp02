@@ -1,31 +1,32 @@
-<div class="wrap">
-
+<div class="wrap" id="top">
   <nav>
-
-    <div><i class="fas fa-home fa-fw"></i><span>Início</span></div>
-    <div><i class="fas fa-comments fa-fw"></i><span>Contatos</span></div>
-    <div><i class="fas fa-info-circle fa-fw"></i><span>Sobre</span></div>
-
+    <div routerLink="/home" title="Página Inicial">
+      <i class="fas fa-home fa-fw"></i><span>Início</span>
+    </div>
+    <div routerLink="/contacts" title="Contatos">
+      <i class="fas fa-comments fa-fw"></i><span>Contatos</span>
+    </div>
+    <div routerLink="/about" title="Sobre">
+      <i class="fas fa-info-circle fa-fw"></i><span>Sobre</span>
+    </div>
   </nav>
 
   <header>
-
-    <i class="fas fa-spider fa-fw fa-4x"></i>
+    <i class="fas fa-spider fa-fw fa-5x" routerLink="/home"></i>
     <h1>Meu App 02<small>Programando em Angular</small></h1>
-
   </header>
 
   <main>
-
     <router-outlet></router-outlet>
-    <h2>Título Fake</h2>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque exercitationem eum alias aspernatur labore tenetur. Voluptate natus a nesciunt delectus, amet commodi nulla facere tenetur ex possimus obcaecati hic labore.</p>
   </main>
 
   <footer>
-    <div class="home"><i class="fas fa-home fa-fw"></i></div>
+    <div class="home" routerLink="/home">
+      <i class="fas fa-home fa-fw" title="Página Inicial"></i>
+    </div>
     <div class="copyright">&copy; Copyright 2021 Jhonatan Salgado</div>
-    <div class="top"><i class="fas fa-arrow-alt-circle-up fa-fw"></i></div>
+    <div class="top" (click)="toAnchor('top')">
+      <i class="fas fa-arrow-alt-circle-up fa-fw" title="Topo da Página"></i>
+    </div>
   </footer>
-
 </div>

@@ -1,6 +1,6 @@
 {
-  "name": "Meuapp02",
-  "short_name": "Meuapp02",
+  "name": "MeuApp02",
+  "short_name": "MeuApp02",
   "theme_color": "#1976d2",
   "background_color": "#fafafa",
   "display": "standalone",
