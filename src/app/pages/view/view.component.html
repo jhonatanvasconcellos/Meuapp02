@@ -1,0 +1,39 @@
+<article *ngIf="item">
+
+  <h2>{{ (item | async)?.title }}</h2>
+  <small class="block text-right">Por {{ (item | async)?.author }} em {{ (item | async)?.date | date: 'dd/MM/yyyy'
+    }}.</small>
+  <div [innerHTML]="(item | async)?.text"></div>
+  <hr>
+
+  <p class="text-center">
+    <button class="btn primary" routerLink="/home"><i class="fas fa-pen-nib fa-fw"></i> Todos os artigos</button>
+  </p>
+
+  <hr>
+
+  <form class="comment-form">
+    <h3>Comente</h3>
+    <textarea name="uComment" [(ngModel)]="uComment"></textarea>
+    <p>
+      <button class="btn primary" (click)="sendComment()">Enviar</button>
+      <small>&nbsp; &nbsp; &nbsp; Somente texto.</small>
+    </p>
+  </form>
+
+  <hr>
+
+  <h3>Comentários</h3>
+  <div *ngIf="comments == ''">
+    <p>Seja a(o) primeira(o) a comentar!</p>
+  </div>
+  <div class="comment" *ngFor="let comment of comments | async">
+
+    <small class="comment-header">
+      Por {{ comment.name }} em {{ comment.date | date: 'dd/MM/yyyy'}}.
+    </small>
+    <div [innerHTML]="comment.comment"></div>
+
+  </div>
+
+</article>

@@ -33,10 +33,12 @@ nav div {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 1rem;
+  padding: .6rem;
   color: white;
   transition: 0.2s;
   cursor: pointer;
+  font-size: .9rem;
+  height: 100%;
 }
 
 nav div:hover {
@@ -47,6 +49,15 @@ nav div:hover {
 nav div i {
   font-size: 1.5rem;
   margin-bottom: 0.25rem;
+}
+
+nav .user-in {
+  padding: .25rem;
+}
+
+nav .user-in img {
+  width: 3rem;
+  border-radius: 50%;
 }
 
 /* Para telas maiores que 575 pixels */

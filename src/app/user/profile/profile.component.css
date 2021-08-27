@@ -1,0 +1,9 @@
+.card {
+  padding-bottom: 0;
+}
+
+.card-title small {
+  font-size: 0.9rem;
+  font-weight: normal;
+  color: rgb(49, 49, 49);
+}

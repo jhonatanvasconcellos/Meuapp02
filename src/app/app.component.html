@@ -9,6 +9,16 @@
     <div routerLink="/about" title="Sobre">
       <i class="fas fa-info-circle fa-fw"></i><span>Sobre</span>
     </div>
+
+    <div class="user-in" *ngIf="auth.user | async as user; else showLogin" routerLink="/user/profile">
+      <img src="{{ user.photoURL }}" alt="{{ user.displayName }}">
+    </div>
+
+    <ng-template #showLogin>
+      <div routerLink="/user/login" title="Logue-se!">
+        <i class="fas fa-sign-in-alt fa-fw"></i><span>Login</span>
+      </div>
+    </ng-template>
   </nav>
 
   <header>
@@ -24,7 +34,7 @@
     <div class="home" routerLink="/home">
       <i class="fas fa-home fa-fw" title="Página Inicial"></i>
     </div>
-    <div class="copyright">&copy; Copyright 2021 Jhonatan Salgado</div>
+    <div class="copyright">&copy; Copyright 2021 André Ataíde</div>
     <div class="top" (click)="toAnchor('top')">
       <i class="fas fa-arrow-alt-circle-up fa-fw" title="Topo da Página"></i>
     </div>

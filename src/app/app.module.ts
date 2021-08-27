@@ -13,6 +13,12 @@ import { E404Component } from './pages/e404/e404.component';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireAuthModule } from '@angular/fire/auth';
+import { ViewComponent } from './pages/view/view.component';
+import { LoginComponent } from './user/login/login.component';
+import { LogoutComponent } from './user/logout/logout.component';
+import { ProfileComponent } from './user/profile/profile.component';
+
+// import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,7 +26,11 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
     HomeComponent,
     ContactsComponent,
     AboutComponent,
-    E404Component
+    E404Component,
+    ViewComponent,
+    LoginComponent,
+    LogoutComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
@@ -28,6 +38,7 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
     AngularFirestoreModule,
     AngularFireAuthModule,
     AppRoutingModule,
+    // FormsModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: environment.production,
       // Register the ServiceWorker as soon as the app is stable

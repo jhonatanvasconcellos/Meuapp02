@@ -40,8 +40,21 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Fundo do tema */
+hr {
+  border: none;
+  border-top: 1px dotted grey;
+}
 
+input,
+textarea,
+button {
+  font-family: inherit;
+  font-size: inherit;
+  border: 1px solid grey;
+  padding: 0.5rem;
+}
+
+/* Fundo do tema */
 body {
   background-color: darkblue;
   background-image: url(assets/background01.jpg);
@@ -54,25 +67,33 @@ body {
 
 /* Elemento Article */
 
-article{
+article {
   padding: 0 1rem;
 }
 
 /***** Estilos de uso geral *****/
 
 /* Centraliza conteúdo do elemento */
-.center {
+.text-center {
   text-align: center;
 }
 
-/* Imagens Responsivas Fluidas*/
+/* Alinha conteúdo à direita */
+.text-right {
+  text-align: right;
+}
 
+/* Elemento é um bloco */
+.block {
+  display: block;
+}
+
+/* Imagens Responsivas Fluidas*/
 .fluid {
   max-width: 100%;
 }
 
-/*Botões*/
-
+/* Botões */
 .btn {
   color: white;
   border: none;
@@ -84,13 +105,58 @@ article{
   transition: 0.2s;
 }
 
-/* Botões 'primary' */
+.btn:hover {
+  background: grey;
+  color: white;
+}
 
+/* Botões 'primary' */
 .primary {
   background: steelblue;
   color: white;
 }
 
-.primary:hover {
+.danger {
   background: orangered;
+  color: white;
+}
+
+button.expand {
+  display: block;
+  width: 100%;
+  max-width: 400px;
+  margin: auto;
+}
+
+/* Artigos */
+
+article figure {
+  display: table;
+  margin: auto;
+  font-size: small;
+  text-align: center;
+}
+
+article figure img {
+  max-width: 100%;
+}
+
+/* Cards */
+
+.card {
+  width: 100%;
+  max-width: 400px;
+  margin: auto;
+  background: white;
+  border: 1px solid grey;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+}
+
+.card img {
+  display: block;
+  margin: auto;
+}
+
+.card-content {
 }

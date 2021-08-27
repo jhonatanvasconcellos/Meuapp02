@@ -1,0 +1,35 @@
+Firebase Firestore Database
+---------------------------
+
+articles
+
+	id: string
+    date: string
+    thumbnail: string
+	title: string
+    resume: string
+    text: string
+	author: string
+    status: string
+
+comments
+
+	id: string
+	date: string
+	article: string
+	name: string
+	email: string
+	photo: string
+	uid: string
+	comment: string
+	status: string
+	
+contacts
+
+	id: string
+	date: string
+	name: string
+	email: string
+	subject: string
+	message: string
+	status: string
