@@ -1,3 +1,8 @@
+/**
+ * 1.0 - Exibe um artigo único com base no Id deste no banco de dados.
+ * 1.1 - Exibe os comentários para o artigo.
+ */
+
 import { Component, OnInit } from '@angular/core';
 
 // Importa dependências
@@ -40,7 +45,6 @@ export class ViewComponent implements OnInit {
     // Obtém dados do usuário logado
     this.auth.onAuthStateChanged((userData) => {
       this.user = userData;
-      console.log(this.user);
     });
 
   }

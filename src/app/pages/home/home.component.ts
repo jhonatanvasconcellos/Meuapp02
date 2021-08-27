@@ -1,3 +1,7 @@
+/**
+ * Página inicial do aplicativo.
+ */
+
 import { Component, OnInit } from '@angular/core';
 
 // 1) Importa dependências

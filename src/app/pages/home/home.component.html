@@ -6,7 +6,7 @@
 
   <div class="list">
     <div class="item" *ngFor="let item of items | async" routerLink="/view/{{ item.id }}">
-      <div class="list-img">c</div>
+      <div class="list-img" style="background-image: url('{{ item.thumbnail }}');"></div>
       <div>
         <h3>{{ item.title }}</h3>
         {{ item.resume }}

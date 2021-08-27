@@ -1,3 +1,7 @@
+/**
+ * Página de erro 404. Documento não encontrado.
+ */
+
 import { Component, OnInit } from '@angular/core';
 
 @Component({
