@@ -25,7 +25,6 @@ header,
 nav,
 footer,
 article,
-main,
 aside {
   display: block;
 }
@@ -63,11 +62,16 @@ body {
   background-size: cover;
 }
 
-/*****Conteúdo Central*****/
-
 /* Elemento Article */
 
+main {
+  flex-grow: 1;
+  background: rgba(255, 255, 255, 0.9);
+}
+
 article {
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent;
   padding: 0 1rem;
 }
 
@@ -110,6 +114,13 @@ article {
   color: white;
 }
 
+.btn:disabled {
+  background: transparent;
+  color: grey;
+  border: 1px solid grey;
+  cursor: not-allowed;
+}
+
 /* Botões 'primary' */
 .primary {
   background: steelblue;
@@ -119,6 +130,12 @@ article {
 .danger {
   background: orangered;
   color: white;
+}
+
+.danger small {
+  display: inline-block;
+  padding: 0.25rem;
+  border-radius: 0.1rem;
 }
 
 button.expand {
@@ -156,7 +173,4 @@ article figure img {
 .card img {
   display: block;
   margin: auto;
-}
-
-.card-content {
 }

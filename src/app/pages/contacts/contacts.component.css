@@ -1,0 +1,57 @@
+.contact-form {
+  display: block;
+  margin: 1rem;
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  border-radius: 0.25rem;
+  width: 100%;
+}
+
+.contact-form textarea {
+  height: 6rem;
+  resize: vertical;
+}
+
+.social-list {
+  display: table;
+  margin: auto;
+  margin-bottom: 1rem;
+}
+
+.social-list a {
+  display: flex;
+  align-items: center;
+  padding: 0.25rem;
+}
+
+.social-list i {
+  font-size: 1.5rem;
+  padding-right: 0.5rem;
+}
+
+aside {
+  padding: 0 1rem;
+  border-top: 3px dotted grey;
+}
+
+@media (min-width: 768px) {
+  .flexbox {
+    display: flex;
+  }
+  article {
+    flex-grow: 1;
+  }
+  aside {
+    min-width: 200px;
+    max-width: 200px;
+    border: none;
+    border-left: 3px dotted grey;
+  }
+}

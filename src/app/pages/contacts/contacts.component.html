@@ -1,1 +1,85 @@
-<p>contacts works!</p>
+<div class="flexbox">
+
+  <article>
+
+    <h2>Faça Contato</h2>
+
+    <p>Preencha os campos abaixo para entrar em contato com a equipe do site.</p>
+
+    <form [formGroup]="contactForm" (ngSubmit)="contactSend()" class="contact-form">
+
+      <p>
+        <label for="name">
+          Nome:
+
+          <span class="danger" *ngIf="contactForm.controls.name.errors">
+            <small *ngIf="contactForm.controls.name.errors.required">* Obrigatório</small>
+            <small *ngIf="contactForm.controls.name.errors.minlength">* Inválido</small>
+          </span>
+
+        </label>
+        <input type="text" id="name" formControlName="name">
+      </p>
+
+      <p>
+        <label for="email">
+          E-mail:
+
+          <span class="danger" *ngIf="contactForm.controls.email.errors">
+            <small *ngIf="contactForm.controls.email.errors.required">* Obrigatório</small>
+            <small *ngIf="contactForm.controls.email.errors.email">* Inválido</small>
+          </span>
+
+        </label>
+        <input type="text" id="email" formControlName="email">
+      </p>
+
+      <p>
+        <label for="subject">
+          Assunto:
+
+          <span class="danger" *ngIf="contactForm.controls.subject.errors">
+            <small *ngIf="contactForm.controls.subject.errors.required">* Obrigatório</small>
+            <small *ngIf="contactForm.controls.subject.errors.minlength">* Inválido</small>
+          </span>
+
+        </label>
+        <input type="text" id="subject" formControlName="subject">
+      </p>
+
+      <p>
+        <label for="message">
+          Mensagem:
+
+          <span class="danger" *ngIf="contactForm.controls.message.errors">
+            <small *ngIf="contactForm.controls.message.errors.required">* Obrigatório</small>
+            <small *ngIf="contactForm.controls.message.errors.minlength">* Inválido</small>
+          </span>
+
+        </label>
+        <textarea id="message" formControlName="message"></textarea>
+      </p>
+
+      <p>
+        <button type="submit" class="btn primary" [disabled]="contactForm.invalid">Enviar</button>
+      </p>
+
+    </form>
+
+  </article>
+
+  <aside>
+
+    <h3>Redes Sociais</h3>
+    <div class="text-center"><img class="fluid" src="assets/social.jpg" alt="Minhas Redes Sociais"></div>
+    <p>Você também pode nos connhecer e entrar em contato pelas redes sociais.</p>
+    <div class="social-list">
+      <a href="https://facebook.com/Luferat"><i class="fab fa-facebook-square"></i><span>Facebook</span></a>
+      <a href="https://github.com/Luferat"><i class="fab fa-github-square"></i><span>GitHub</span></a>
+      <a href="https://linkedin.com/Luferat"><i class="fab fa-linkedin"></i><span>Linkedin</span></a>
+      <a href="https://instagram.com/Luferat"><i class="fab fa-instagram-square"></i><span>Instagram</span></a>
+    </div>
+
+  </aside>
+
+  </div>

@@ -18,7 +18,9 @@ import { LoginComponent } from './user/login/login.component';
 import { LogoutComponent } from './user/logout/logout.component';
 import { ProfileComponent } from './user/profile/profile.component';
 
-// import { FormsModule } from '@angular/forms';
+// 1) Importa módulo de formulários reativos do Angular
+import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,7 @@ import { ProfileComponent } from './user/profile/profile.component';
     ViewComponent,
     LoginComponent,
     LogoutComponent,
-    ProfileComponent
+    ProfileComponent,
   ],
   imports: [
     BrowserModule,
@@ -38,15 +40,16 @@ import { ProfileComponent } from './user/profile/profile.component';
     AngularFirestoreModule,
     AngularFireAuthModule,
     AppRoutingModule,
-    // FormsModule,
+    FormsModule,
+    ReactiveFormsModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: environment.production,
       // Register the ServiceWorker as soon as the app is stable
       // or after 30 seconds (whichever comes first).
-      registrationStrategy: 'registerWhenStable:30000'
-    })
+      registrationStrategy: 'registerWhenStable:30000',
+    }),
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
